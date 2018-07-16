@@ -26,7 +26,7 @@ public  class Validator {
 		/*if(isEmpty((dto.getType()))
 			er.getMsg().add("User Name cannot be empty");
 */
-		if(isEmpty(dto.getuserName()))
+		if(isEmpty(dto.getUserName()))
 			er.getMsg().add("User Name cannot be empty");
 		if(isEmpty(dto.getFirstName()))
 			er.getMsg().add("First name cannot be empty");

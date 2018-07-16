@@ -32,7 +32,7 @@ public class RegisterationServiceImpl implements RegisterationService  {
 			UUID uuid = UUID.randomUUID();
 			String randomUUIDString = uuid.toString();
 
-			rmeUser.setUserName(registerationRequestDto.getuserName());
+			rmeUser.setUserName(registerationRequestDto.getUserName());
 			rmeUser.setEmail(registerationRequestDto.getEmail());
 			
 			

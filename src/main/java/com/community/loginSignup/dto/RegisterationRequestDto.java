@@ -1,6 +1,5 @@
 package com.community.loginSignup.dto;
 
-import com.community.login.Signup.enums.UserType;
 
 public class RegisterationRequestDto {
 	
@@ -11,7 +10,6 @@ public class RegisterationRequestDto {
 	private String phoneNumber;
 	private String country;
 	private String password;
-//	private String type;
 	
 	public RegisterationRequestDto() {
 		
@@ -26,12 +24,11 @@ public class RegisterationRequestDto {
 		this.phoneNumber = phoneNumber;
 		this.country = country;
 		this.password = password;
-//		this.type = type;
 	}
-	public String getuserName() {
+	public String getUserName() {
 		return userName;
 	}
-	public void setuserName(String userName) {
+	public void setUserName(String userName) {
 		this.userName = userName;
 	}
 	public String getEmail() {
@@ -70,17 +67,5 @@ public class RegisterationRequestDto {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getUserName() {
-		return userName;
-	}
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-//	public String getType() {
-//		return type;
-//	}
-//	public void setType(String type) {
-//		this.type = type;
-//	}
 	
 }

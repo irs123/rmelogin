@@ -22,7 +22,7 @@ public class RegisterationController {
 	@Autowired
 	RegisterationService registerationService;
 	
-	@PostMapping(value="/register")
+	@PostMapping(value="register")
 	ResponseEntity<Object> registeration(HttpSession httpSession , @ModelAttribute("requestdto") RegisterationRequestDto registerationRequestDto){
 		
 			ErrorResponseDto er = Validator.registerRequestValidator(registerationRequestDto);
