@@ -23,10 +23,19 @@ public class RmeUser {
 	private String email;
 	private String firstName;
 	private String lastName;
-	private long phoneNo;
+	private String phoneNo;
 	private String country;
+	@Enumerated(EnumType.STRING)
+	private UserType userType;
+	
 //	private String type;
 	
+	public UserType getUserType() {
+		return userType;
+	}
+	public void setUserType(UserType userType) {
+		this.userType = userType;
+	}
 	public String getEmail() {
 		return email;
 	}
@@ -45,10 +54,10 @@ public class RmeUser {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public long getPhoneNo() {
+	public String getPhoneNo() {
 		return phoneNo;
 	}
-	public void setPhoneNo(long phoneNo) {
+	public void setPhoneNo(String phoneNo) {
 		this.phoneNo = phoneNo;
 	}
 	public String getCountry() {

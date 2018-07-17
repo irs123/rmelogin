@@ -34,20 +34,13 @@ public class RegisterationServiceImpl implements RegisterationService  {
 
 			rmeUser.setUserName(registerationRequestDto.getUserName());
 			rmeUser.setEmail(registerationRequestDto.getEmail());
-			
-			
-			
+			rmeUser.setFirstName(registerationRequestDto.getFirstName());
+			rmeUser.setLastName(registerationRequestDto.getLastName());
+			rmeUser.setUserType(registerationRequestDto.getUserType());
+			rmeUser.setPhoneNo(registerationRequestDto.getPhoneNumber());
 
 			rmeUser.setCountry(registerationRequestDto.getCountry());
 			rmeUser.setPassword(Encryption.getEncryptedPassword(registerationRequestDto.getPassword()));
-			
-			
-//			rmeUser.setType(registerationRequestDto.getType());
-
-			
-
-			
-		
 
 			dao.register(rmeUser);
 

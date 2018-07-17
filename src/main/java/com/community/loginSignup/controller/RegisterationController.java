@@ -3,7 +3,6 @@ package com.community.loginSignup.controller;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -22,7 +21,7 @@ public class RegisterationController {
 	@Autowired
 	RegisterationService registerationService;
 	
-	@PostMapping(value="register")
+	@PostMapping(value="register1")
 	ResponseEntity<Object> registeration(HttpSession httpSession , @ModelAttribute("requestdto") RegisterationRequestDto registerationRequestDto){
 		
 			ErrorResponseDto er = Validator.registerRequestValidator(registerationRequestDto);
@@ -40,7 +39,7 @@ public class RegisterationController {
 		}
 	}
 	
-	@PostMapping(value="verifyEmail")
+	@PostMapping(value="verifyEmail1")
 	ResponseEntity<Object> verifyEmail(HttpSession httpSession , @ModelAttribute("email") String email){
 		
 		try {
@@ -57,7 +56,7 @@ public class RegisterationController {
 	}
 	
 	
-	@PostMapping(value = "verifyUserName")
+	@PostMapping(value = "verifyUserName1")
 	ResponseEntity<Object> verifyUserName(HttpSession httpSession, @ModelAttribute("userName") String userName){
 		
 		try {
@@ -72,7 +71,7 @@ public class RegisterationController {
 		}
 	}
 	
-	@PostMapping(value = "verifyPhoneNumber")
+	@PostMapping(value = "verifyPhoneNumber1")
 	ResponseEntity<Object> verifyMobile(HttpSession httpSession , @ModelAttribute("phoneNumber") String phoneNumber ){
 		try {
 			  registerationService.verifyPhoneNumber(phoneNumber);

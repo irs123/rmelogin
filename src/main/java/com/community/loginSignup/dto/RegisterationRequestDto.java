@@ -1,5 +1,9 @@
 package com.community.loginSignup.dto;
 
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
+import com.community.login.Signup.enums.UserType;
 
 public class RegisterationRequestDto {
 	
@@ -10,7 +14,9 @@ public class RegisterationRequestDto {
 	private String phoneNumber;
 	private String country;
 	private String password;
-	
+	@Enumerated(EnumType.STRING)
+	private UserType userType;
+		
 	public RegisterationRequestDto() {
 		
 	}
@@ -24,6 +30,12 @@ public class RegisterationRequestDto {
 		this.phoneNumber = phoneNumber;
 		this.country = country;
 		this.password = password;
+	}
+	public UserType getUserType() {
+		return userType;
+	}
+	public void setUserType(UserType userType) {
+		this.userType = userType;
 	}
 	public String getUserName() {
 		return userName;

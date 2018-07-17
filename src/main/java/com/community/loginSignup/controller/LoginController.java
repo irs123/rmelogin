@@ -31,7 +31,7 @@ public class LoginController {
 
 	
 	@PostMapping(value ="login")
-	ResponseEntity<Object> login(HttpServletRequest request, HttpServletResponse response, @ModelAttribute LoginRequestDto loginRequestDto) throws Exception{
+	ResponseEntity<Object> login(HttpServletRequest request, HttpServletResponse response, @ModelAttribute("loginCommunity") LoginRequestDto loginRequestDto) throws Exception{
 		    RmeUser rmeUser = null;
 		try {
 			

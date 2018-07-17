@@ -45,7 +45,7 @@ public class LoginDaoImpl implements LoginDao {
 		Criteria crit = getCurrentSession().createCriteria(RmeUser.class);
 		crit.add(Restrictions.eq("userName",loginRequestDto.getUserName()));
 		List<RmeUser> results = crit.list();
-		//System.out.println(results.get(0).getUuid());
+		System.out.println(results.get(0).getUserId());
 		 return results.get(0).getUserName();
 		
 		 
